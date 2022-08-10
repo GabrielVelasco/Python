@@ -1,0 +1,8 @@
+Quem ganhou a copa do mundo em 1994 ?
+======
+França
+Estados Unidos
+Brasil
+Espanha
+======
+3
