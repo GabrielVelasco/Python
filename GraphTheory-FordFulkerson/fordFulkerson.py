@@ -36,15 +36,15 @@ class Graph:
 			# Get all adjacent vertices of the dequeued vertex u
 			# If a adjacent has not been visited, then mark it
 			# visited and enqueue it
-			for ind, val in enumerate(self.graph[u]):
-				if not self.is_visited(visited, ind) and val > 0:
+			for node, resCapacity in enumerate(self.graph[u]):
+				if not self.is_visited(visited, node) and resCapacity > 0:
 					# If we find a connection to the sink node,
 					# then there is no point in BFS anymore
 					# We just have to set its parent and can return true
-					queue.append(ind)
-					visited[ind] = True
-					parent[ind] = u
-					if ind == t:
+					queue.append(node)
+					visited[node] = True
+					parent[node] = u
+					if node == t:
 						return True
 
 		# We didn't reach sink in BFS starting
